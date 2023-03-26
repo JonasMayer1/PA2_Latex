@@ -1,30 +1,11 @@
 % !TEX root =  master.tex
 \chapter{Anhang}\label{anhang}
 
-\begin{lstlisting} 
-      
-  * => add the selection field: Changed On
-    lv_id = 'UPDDATS'.
-    CONCATENATE lc_type_prefix '-' lv_id INTO lv_range_table_type.
-    wd_this->mo_select_options->add_selection_field( i_id = lv_id
-    it_result = wd_this->mo_select_options->create_range_table( lv_range_table_type )
-    i_no_intervals = abap_true
-    i_value_help_type = if_wd_value_help_handler=>co_prefix_auto
-    i_value_help_id = 'CALENDAR'
-    i_suggest_values = abap_true ).
-  
-  * => add the selection field: Changed By
-    lv_id = 'UPDNAMS'.
-    CONCATENATE lc_type_prefix '-' lv_id INTO lv_range_table_type.
-    wd_this->mo_select_options->add_selection_field( i_id = lv_id
-    it_result = wd_this->mo_select_options->create_range_table( lv_range_table_type )
-    i_no_intervals = abap_true
-    i_value_help_type = if_wd_value_help_handler=>co_prefix_searchhelp
-    i_value_help_id = '/PLMB/SEA_COLLECTIVE_USERNAME'
-    i_suggest_values = abap_true ).
-  
-  * => set defaults
-    wd_this->mo_select_options->apply_p13n_default_values( ).
+\section{Konzernstruktur großer Versicherer}
 
-\end{lstlisting}
-
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{img/beteiligungsstruktur-axa-konzern.pdf}
+  \caption[AXA SE - Konzernstruktur]{AXA SE - Konzernstruktur (AXA Deutschland)}
+  \label{fig:AXAKstr}
+\end{figure}
