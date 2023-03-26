@@ -1,0 +1,90 @@
+\clearpage
+\chapter{Vorgehensweise}
+\section{Referenzmodellierung}
+
+Bei der Betrachtung des Kundenwunsches im SAP Customer Connection Programm fällt auf, dass die Kunden auf die \ac{plm}-Objekte der Materialstückliste, Rezepte und Dokumente verweisen, bei denen die gewünschten Änderungen bereits umgesetzt wurden. Damit die Suchoberflächen untereinander nicht inkonsistent sind, soll sich die Verwirklichung der neuen Suchkriterien bei der Spezifikation an den Suchscreens der oben genannten \ac{plm}-Objekte orientieren.\autocite[Vgl.][]{ADSESPEC}
+
+
+%Im weiteren Verlauf der Arbeit wird daher für die Analyse der oben genannten \ac{plm}-Objekte und zur Umsetzung des Kundenwunsches die Referenzmodellierung genutzt. Ziel der Referenzmodellierung ist es, durch die Wiederverwendung von Modellinhalten die Effizienz und die Effektivität im Entwicklungsprozess zu steigern. Durch den Transfer von betriebswirtschaftlichem Know-How können die Kosten und der Entwicklungszeitraum reduziert werden. \autocite[Vgl.][S.1-2]{VOMBROCKE2018} \autocite[Vgl.][S.2]{VOMBROCKE2018}
+
+
+Im weiteren Verlauf der Arbeit werden daher die Suchmasken der oben genannten \ac{plm}-Objekte als Referenzmodelle analysiert und für die Umsetzung des Kundenwunsches genutzt. 
+Ziel der Referenzmodellierung ist es, durch die Wiederverwendung von Modellinhalten die Entwicklungsprozesse zu beschleunigen und die Qualität der Anwendungsmodelle zu steigern.\autocite[Vgl.][S.1-2]{VOMBROCKE2018}  Darüber hinaus können durch den Transfer von betriebswirtschaftlichem Know-how Kosten reduziert und Prozesse vereinfacht werden.\autocite[Vgl.][S.39-41]{KRCMAR2015}
+
+
+% Ziel ist es, durch die Wiederverwendung von Modellinhalten die Wirtschaftlichkeit in der Entwicklung zu vergrößern. \autocite[Vgl.][S.15]{HARS1994}
+
+%Die Beziehung zwischen Referenz- und Anwendungsmodell ist dadurch gekennzeichnet, dass "Gegenstand oder Inhalt des Referenzmodells bei der Konstruktion des Gegenstands oder Inhalts des Anwendungsmodells wieder verwendet werden". \autocite[S.32]{SCHMID2015}
+
+Ein Referenzmodell ist dadurch gekennzeichnet, dass dessen Inhalt bei der Konstruktion des Anwendungsmodells wiederverwendet werden kann.\autocite[Vgl.][S.23]{BARTSCH2015} Zu den wesentlichen Merkmalen eines Referenzmodells gehört der Anspruch auf Allgemeingültigkeit. Die Allgemeingültigkeit bezeichnet die Eigenschaft des Referenzmodells zumindest potenziell für eine Klasse von Problemen nützlich zu sein. \autocite[Vgl.][S.15]{HARS1994}
+
+Darüber hinaus ist auch der Empfehlungscharakter ein wichtiger Bestandteil der Referenzmodellierung. Da das Referenzmodell nur eine Handlungsempfehlung darstellt, kann bei Nutzung des Modells davon abgewichen und das Anwendungsmodell an die entsprechenden Anforderungen angepasst werden.\autocite[Vgl.][S.23-25]{BARTSCH2015} 
+%\autocite[Vgl.][S.32f]{SCHMID2015} 
+
+%Ein weiterer Vorteil der Referenzmodellierung ist die Risikominimierung. Durch die Mehrfachvalidierung der Referenzmodelle, das in den Modellen enthaltene Branchen spezifische Wissen und das einfache Erkennen von bestehenden Schwachstellen in den bisherigen Abläufen führen zu einem geringeren Fehlerrate bei der Entwicklung neuer Modelle.  
+
+Durch die Wiederverwendung von Modellinhalten kann außerdem das Risiko auf eine fehlerhafte Konstruktion reduziert werden. Die Mehrfachvalidierung der Referenzmodelle und das Erkennen möglicher Schwachstellen in den bisherigen Abläufen ermöglichen es, potenzielle Fehler in der Entwicklung früh zu erkennen und zu vermeiden.\autocite[Vgl.][S.39-42]{KRCMAR2015}
+
+
+%Folglich empfielt es sich im weiteren Verlauf der Arbeit die Methodik der Referenzmodellierung zunutzen, da sich diese mit der Wiederverwendung von Modellinhalten befasst.\autocite[Vgl.][S.15]{HARS1994}
+%Dabei schafft das Referenzmodell einen Bezugspunkt für andere Objekte. \autocite[Vgl.][S.32]{SCHMID2015} 
+%Kritisiert wird an der Referenzmodellierung jedoch auch, dass der Empfehlungscharakter und die Allgemeingültigkeit durch den Anwenderkreis validiert werden und somit subjektiv sind. 
+In der Praxis wird die Referenzmodellierung vor allem in der Entwicklung und im Customizing angewendet. Der Nutzen wird vor allem dadurch bestimmt, in welchem Umfang das Referenzmodell selbst und wie häufig es verwendet werden kann.\autocite[Vgl.][S.1-2]{VOMBROCKE2018}
+
+
+\begin{comment}
+
+Wiederverwendung:
+Wiederverwendung des Inhalts von Konstruktionsmodellen bei dem Erstellen neuer Modelle 
+Beziehung zwischen Referenz- und Anwendungsmodell dadurch gekennzeichnet ist, dass Gegenstand oder Inhalt des Referenzmodells bei der Konstruktion des Gegenstands oder Inhalts des Anwendungsmodells wieder verwendet werden
+Modell, das Menschen bei der Konstruktion von Anwendungsmodellen unterstützt
+Definition: Modell ist ein Referenzmodell, wenn es wiederverwendet wird oder für den Zweck der Wiederverwendung entwickelt wurde 
+Empfehlung, die einen Bezugspunkt für andere Modelle schafft.
+Nutzorientierte Sichweise
+
+Anspruch auf Allgemeingültig; 
+Sollempfehlungen für eine Klasse abstrakter Anwendungsgebiete, Modell für eine Klasse von Problemen einsetzbar, es muss mindestens potentiell für die Nutzung weiterer Modelle nützlich sein
+
+Empfehlugnscharakter: 
+Angepasst oder erweitert werden; 
+werden zur inhaltlichen Unterstützung bei der Erstellung von Anwendungsmodellen entwickelt oder genutzt
+Anpassung des Modells an die spezifischen Gegebenheiten: HARS
+Ziel:
+Referenzmodelle sind Hilfsmittel um die Effektivität und Effizienz in der Modellierung zu steigern
+Kosten und Zeit des Konstruktionsprozesses = Effizienz, Effektivität = Modelqualität, Ergebnisqualität
+Ziel: Ausgangslösung wird modifiziert um die  Wirtschaftlichkeit durch den Transfer von betriebswirtschaftlichem Know-How  zu steigern
+Ergebnis neuer Modelle abhängig von derQualität des Referenzmodells 
+
+Zusatznutzen Subjektiv: Negativ Punkt abräumen
+Risiko, dass die Eigenschaften Allgemeingültigkeit und Empfehlungscharakter subjektiv sind
+Weiterhin muss das Referenzmodell den Anwendern einen Zusatznutzen zu bestehenden Ansätzen zur Verfügung stellen. Da der Zusatznutzen nur subjektiv messbar ist, hat seine Validierung durch den Anwenderkreis zu erfolgen
+Risikominimierung
+
+Einsatzgebiet
+Zuerst bei Informationmodellierung eingesetzt
+Praxis: Entwicklung und Customizing
+Nutzen durch Wert- und Mengenkomponente determiniert, für einmalige Anwendung als auch für Mehrfachanwendung geeignet
+\end{comment}
+
+
+\section{Ablauf eines Customer Connection Requests}
+
+
+
+Ein Kundenwunsch, der im Customer Connection Programm eingereicht und in der Selection Phase für die kurz- oder langfristige Realisierung eingeplant wurde, durchläuft anschließend die nachfolgenden Schritte bei der Implementierung.
+
+Für den Auftrag wird zunächst eine Korrekturmaßnahme angelegt, in der alle für die Umsetzung des Kundenvorschlags gemachten Änderungen abgespeichert werden können. Bestandteil der Korrekturmaßnahme ist auch der später an den Kunden als Sofortlösung ausgelieferte Hinweis.
+
+Während der Umsetzung werden im Hinweis die Voraussetzungen, die Kundensysteme mitbringen müssen, um den Hinweis nutzen zu können, sowie die Systeme, für die der Hinweis gültig ist, dokumentiert. Des Weiteren werden dort auch die Informationen, die der Kunde zur Implementierung und zum Nachvollziehen der Änderungen benötigt, und die Ursache für den Customer Connection Request erfasst.
+
+Neben dem Hinweis werden weitere wichtige Informationen zu der Bearbeitung des Customer Connection Requests in dem Projektmanagement Tool Jira verwaltet. Hier wird dem Kundenauftrag ein Entwickler zugeteilt und der benötige Arbeitsaufwand abgeschätzt. Darüber hinaus werden in Jira auch wichtige interne Dokumente, die zum Kundenwunsch gehören, abgelegt. Dazu gehören die High Level Spec, die Software Design Description, die Test Case Description und die Kundenpräsentation.
+
+%Zu den Dokumenten gehören die High Level Spec, die Software Design Description, die Test Case Description und die Kundenpräsentation.
+In der High Level Spec wird der Kundenwunsch sowie eine grobe Spezifizierung der Anforderungen festgehalten. In dem zweiten Textdokument, der Software Design Description, wird die technische Umsetzung der Softwareanpassungen genau beschrieben und das finale Ergebnis dokumentiert. Die Test Case Description richtet sich an die Kundengruppe, die den Hinweis vor der Veröffentlichung testen kann, und beinhaltet eine ausführliche Beschreibung der vom Kunden auszuführenden Testfälle. In der Kundenpräsentation werden alle für den Kunden relevanten Informationen über die Anpassung in angemessener Detailtiefe zusammengefasst und anschaulich dargestellt.
+
+Nach der Realisierung wird die Präsentation den Kunden zusammen mit dem erstellten Prototypen vorgestellt, um zu klären, ob die erste Umsetzung den Kundenanforderungen entspricht. Ist dies der Fall, wird den Kunden der vollständige Hinweis zur Implementierung in kundeneigene SAP-Systeme übergeben. Die Kunden haben in einem begrenzten Zeitraum die Möglichkeit, die Erweiterungen zu testen und Feedback einzureichen.
+
+Nach Ablauf dieses Zeitraums werden die Rückmeldungen der Kunden ausgewertet. Bei Bedarf werden nochmals Anpassungen an dem Prototypen vorgenommen, die dann erneut vom Kunden getestet werden müssen.
+
+Nach erfolgreichem Test wird der Hinweis für alle Kunden freigegeben und veröffentlicht. Neben dem Hinweis wird den SAP-Kunden nach Abschluss der Delivery Phase außerdem ein Support Package zu Verfügung gestellt, dass alle Hinweise eines Customer Connection Projektzyklus beinhaltet. Dadurch haben die Kunden später auch die Möglichkeit, alle Hinweise eines Zyklus auf einmal in ihr eigenes SAP-System einzuspielen.
+

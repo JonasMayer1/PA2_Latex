@@ -1,0 +1,283 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Vorlage von:
+%
+%   Prof. Dr. Bernhard Drabant
+%   Prof. Dr. Dennis Pfisterer
+%   Prof. Dr. Julian Reichwald
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Änderungen und Anpassungen von Max Darmstadt
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	ANLEITUNG: 
+%
+%   1. Ersetzen Sie firmenlogo.jpg im Verzeichnis img
+%   2. Passen Sie alle Stellen im Dokument an, die mit 
+%      @stud markiert sind
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	ACHTUNG: 
+%
+%   Für das Erstellen des Literaturverzeichnisses wird das 
+%   modernere Paket biblatex in Kombination mit biber 
+%   verwendet -- nicht mehr das ältere BibTex!
+%   Bitte stellen Sie ggf. Ihre TeX-Umgebung entsprechend 
+%   ein (z.B. TeXStudio: Einstellungen --> Erzeugen --> 
+%   Standard Bibliographieprogramm: biber)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Layout des Dokumentes festlegen: 12pt = Schriftgröße,Abstand für die Bindung der Arbeit, DIV immer gleichgroß wie die Schrift + Satzspiegelgröße, Für mehr Platz auf der Seite, wahrscheinlich ob man bei der A4 seite auch nach unten mehr Platz hat ,Größe der Beschriftungsfläche,ermöglicht Absätze, Literaturverzeichnis zum Inhaltsverzeichnis , ,irgendwas mit Abblidungensnamen in Abbildungsverzeichnis aufnehmen, toc= TableOfContents ,Nummerierung im Inhaltsverzeichnis ohne Punkt, Maße der Fußlinie aus Plain übernommen
+\documentclass[12pt,BCOR=5mm,DIV=12,headinclude=on,footinclude=off,parskip=half,bibliography=totoc,listof=entryprefix,
+               toc=listof,pointlessnumbers,plainfootsepline]{scrreprt}
+
+%Edit MaxD If you want to change the margins:
+%\usepackage[paper=a4paper,left=30mm,right=30mm,top=25mm,bottom=25mm]{geometry}
+
+% Elementare Pakete, Konfigurationen und Definitionen werden geladen
+\input{config}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% @stud
+%
+%	SCHRIFTART (Schrift mit oder ohne Serifen im gesamten Text) 
+%
+% mit Serifen
+%\addtokomafont{disposition}{\rmfamily}
+%\renewcommand*{\familydefault}{\rmdefault}
+%
+% ohne Serifen (default)
+%\addtokomafont{disposition}{\sffamily}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% @stud
+%
+% PERSÖNLICHE ANGABEN (BITTE VOLLSTÄNDIG EINGEBEN zwischen den Klammern: {...})
+%
+\ArtDerArbeit{Projekt} % "Bachelor" oder "Projekt" wählen
+\TitelDerArbeit{Evaluierung und Implementierung einer neuen Suchoberfläche für das SAP Product Lifecycle Management im S/4HANA Umfeld}
+\AutorDerArbeit{Jonas Mayer}
+\Abteilung{AIS PLM}
+\Firma{SAP SE}
+\Kurs{WWI20SCB}
+\Studienrichtung{Sales \& Consulting}
+\Matrikelnummer{7415525}
+\Studiengangsleiter{Herr Prof. Dr. -Ing. Martin}
+\WissBetreuer{Stefanie Bell}
+\FirmenBetreuer{Marco Armbruster}
+\Bearbeitungszeitraum{02.08.2021 -- 22.11.2021}
+\Abgabedatum{22.11.2021}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% @stud
+%
+%	BIBLIOGRAPHY (@stud: Bibliographie-Stil wählen - Position und Indizierung)
+%
+% Auswahl zwischen: IEEE Style, ALPHABETIC Style, HARVARD Style, AUTHOR-YEAR Style 
+%
+% (oder eigenen zulässigen Stil wählen) 
+%
+
+% Position des Zitats
+%
+%\newcommand{\position}{inline} 
+\newcommand{\position}{footnote}
+
+% Indizierung des Zitats
+%
+% 1) NUMERIC Style - e. g. [12]
+%\newcommand{\indextype}{numeric} 
+%
+% 2) ALPHABETIC Style - e. g. [AB12]
+%\newcommand{\indextype}{alphabetic} 
+%
+% 3) IEEE Style - numeric kind of style 
+%\newcommand{\indextype}{ieee} 
+%
+% 4) HARVARD Style 
+%\newcommand{\indextype}{apa} 
+%
+% 5) CHICAGO Style 
+\newcommand{\indextype}{authoryear}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Edit MaxD commented the line below, because it made the font look weird.
+%\renewcommand*{\familydefault}{\sfdefault}
+
+\usepackage[backend=biber, autocite=\position, style=\indextype]{biblatex} 	%package zur Gestaltung des Literaturverzeichnisses:Legt das Backend zum Sortieren der Bibliographie fest, mit sorting=ynt lässt sich festlegen wie das Literaturverzeichnis sortiert werden soll, lässt sich bibliography style festlegen: style=alphabetic
+\apptocmd{\UrlBreaks}{\do\f\do\m}{}{}
+\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
+\setcounter{biburlucpenalty}{9000}% Großbuchstaben
+
+\settingBibFootnoteCite
+
+\newcommand{\abs}{\par\vskip 0.2cm\goodbreak\noindent}
+\newcommand{\nl}{\par\noindent}
+\newcommand{\mcl}[1]{\mathcal{#1}}
+\newcommand{\nowrite}[1]{}
+\newcommand{\NN}{{\mathbb N}}
+
+\newcommand{\imagedir}{img}
+
+\makeindex %erstellt die Indexdatei, in die dann mit \index{Stichwort} aus dem Main Einträge gemacht werden können
+\begin{document}
+%\setTodo
+\setTitlepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KAPITEL UND ANHÄNGE
+%
+% @stud:
+%   - nicht benötigte: auskommentieren/löschen
+%   - neue: bei Bedarf hinzufügen mittels input-Kommando an entsprechender Stelle einfügen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPERRVERMERK
+%
+% @stud: nondisclosurenotice.tex bearbeiten
+%
+%\input{nondisclosurenotice} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	KURZFASSUNG
+%
+% @stud: acknowledge.tex bearbeiten
+%
+%\input{acknowledge} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Disclaimer
+%
+% @stud: acknowledge.tex bearbeiten
+%
+\input{content/disclaimer} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	KURZFASSUNG
+%
+% @stud: abstract.tex bearbeiten
+%
+\input{template/abstract} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% VERZEICHNISSE
+%
+% @stud: ggf. nicht benötigte Verzeichnisse auskommentieren/löschen in Def. von \settingLists in config.tex
+%
+\settingLists
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABKÜRZUNGSVERZEICHNIS
+%
+% @stud: acronyms.tex bearbeiten
+%
+\input{template/acronyms} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\initializeText
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KAPITEL
+%
+% @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
+%
+%Test
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vorgehensweise
+%
+% @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
+%
+\input{content/einleitung}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vorgehensweise
+%
+% @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
+%
+\input{content/technische_grundlagen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vorgehensweise
+%
+% @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
+%
+\input{content/vorgehensweise}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vorgehensweise
+%
+% @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
+%
+\input{content/ist-analyse_der_suchoberfläche}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vorgehensweise
+%
+% @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
+%
+\input{content/soll-konzept_und_implementierung}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vorgehensweise
+%
+% @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
+%
+\input{content/fazit_und_ausblick}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\initializeAppendix %original place EditMaxD
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LITERATURVERZEICHNIS
+% 
+% @stud: Literaturverzeichnis in Datei bibliography.bib anpassen 
+%
+%\raggedright
+\initializeBibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANHÄNGE
+\initializeAppendix
+%
+% @stud: einzelne Anhänge bearbeiten und eigene Anhänge hier einfügen 
+% 
+\addtocontents{toc}{\protect\enlargethispage{2\normalbaselineskip}}
+%\input{template/appendix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{img/abap_performance_program.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EHRENWÖRTLICHE ERKLÄRUNG
+%
+% @stud: ewerkl.tex bearbeiten
+%
+\input{template/ewerkl} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\addcontentsline{toc}{chapter}{Index}
+%\printindex                                        % fügt die Indexdatei mit den gemachten Einträgen am Ende des Dokumentes hinzu
+
+\end{document}
