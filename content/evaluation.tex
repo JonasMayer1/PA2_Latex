@@ -1,10 +1,66 @@
-\chapter{Evaluation der SAP Business Technology Platform für die Anforderungen auf dem deutschen Kfz-Versicherungsmarkt}
-
+\chapter{Analyse}
+%Evaluation der SAP Business Technology Platform für die Anforderungen auf dem deutschen Kfz-Versicherungsmarkt
 \section{Task Charakteristiken - Identifikation der Anforderungen der Kfz-Versicherer an digitale Plattformen}
 
 \subsection{Literaturbetrachtung aktueller Anforderungen an digitale Plattformen}
 
 Nach jeder Anforderung (eine Zahl als eine Art Aufzählung einführen)
+
+Anpassbar - Erweiterung bestehender Applikationen/ Service-orientierte Architektur: Eine der größten Herausforderungen der Versicherungsunternehmen sind die die historisch gewachsenen IT-Landschaften, welche auch als IT-Legacy oder Legacy-Systeme bezeichnet werden. Diese sind seit beginn der 1970er Jahre entstanden und wurden dabei von dem Großteil der Versicherer selbst entwickelt. Mittlerweile führt genau diese IT-Legacy aufgrund der starken Abhängigkeit zwischen den Systemen und der monolithischen Programmstruktur (zu langen Reaktionszeiten bei neuaufkommenden Kundenbedürfnissen sowie) zu langen Entwicklungszyklen. (vgl. S. 10 – 12 Gunter2020) (BAIN)
+
+Option 1:
+Folglich sollte eine technologische Plattform für Kfz-Versicherer eine Service-orientierte-Architektur unterstützen, da diese aufgrund ihrer modularen Struktur und der Wiederverwendbarkeit von vorhandenen Komponenten den Versicherern eine deutlich schnellere Reaktion auf sich ändernde Kundenbedürfnisse und Marktbedingungen (mit einer entsprechenden Applikation) ermöglicht. (vgl. S. 10-11 Urlaß) (1) 
+
+Option 2:
+Damit Kfz-Versicherer schnell auf sich ändernde Kundenbedürfnisse und Marktbedingungen reagieren können, sollte die technologische Plattform eine Service-orientierte Architektur (SOA) unterstützen. Diese ermöglicht es, dass bestehende abgeschlossene Software-Bausteine, wie zum Beispiel die Rechenkerne der verschiedenen Versicherungssparten, weiter genutzt und in eine neue IT-Infrastruktur eingebunden werden können. (vgl. S. 10-11 Urlaß) Dieser modulare Aufbau einer SOA erleichtert das An- und Abdocken neuer Anwendungen an der Kundenschnittstelle. (BAIN)
+
+Darüber hinaus sollte es die Plattform ermöglichen, bestehende Anwendungen mithilfe von kleinen Programmcodes eigenständig erweitern zu können. Hierbei sollten auch alte Programmiersprachen wie Cobolt unterstützt oder die alten Programme über Schnittstellen auch mit modernerer Programmiersprachen wie JavaScript erweiterbar sein. Dabei sollte die Plattform im Idealfall programmierspracheunabhängig sein (Leukert)(McKinsey)(2)
+
+Da insbesondere bei kleinen und mittleren Versicherern die Entwicklungsressourcen sehr knapp sind, sollte die Plattform ebenfalls sogenannte Low- oder besser No-Code-Werkzeuge bereitstellen, damit auch Nichtentwickler kleine Add-Ons bzw. Erweiterungen erstellen können, die sie in ihrem alltäglichen Geschäft erleichtern. (3) (vgl. WEINGARTNER2023)
+
+
+
+Integration ----- Eine Trend der insbesondere in den nächsten Jahren die Versicherungsbranche bestimmen wird, sind die sogenannten Digitalen Ökosysteme und die damit verbundenen Partnerschaften. So erachten gemäß einer Studie der Swiss RE aus dem 2019 mehr als 75\% der Führungskräfte von Versicherungsunternehmen weltweit digitale Ökosysteme und andere Partnerschaften als wesentlich für die Schaffung von Wettbewerbsvorteilen. (vgl. PAYNE2022) (vgl. AVRAMAKIS2023) Für die Partizipation an Ökosystemen ist das Schnittstellenmanagement der zugrunde liegenden Plattform von besonderer Bedeutung, um neue Anbieter schnell anbinden und die Interaktion end-to-end durchführen zu können. Folglich sollte die Plattform auch Tools zum API Management bereitstellen, da diese in Zukunft noch wichtiger werden. (vgl. B. S.137)Das API-Management umfasst die Bereitstellung, Überwachung und Analyse von Schnittstellen zur Verbindung von Apps und Daten innerhalb eines Unternehmens und zwischen verschiedenen Clouds, um sicherzustellen, dass die Anforderungen der Entwickler und Anwendungen erfüllt werden (4) . (vgl S.83f HANSCHKE2021)
+
+Zur Schaffung von Standards für den Austausch von Versicherungsdaten hat sich …(2020) die Free Insurance Data Initiative (FRIDA) gebildet, welche für die einzelnen Sparten gezielte Schnittstellen geschaffen hat. In der in der Kfz-Versicherungssparte ist es die sogenannte Car-ClaimsAPI, welche als REST-Schnittstelle den Austausch von Kfz-Police Daten vereinfachen soll. Folglich sollte die Plattform auch Rest-API Calls unterstützen (vgl. KRETZ2023)
+
+Zudem sollte die Plattform neben REST zur Kommunikation mit den Legacy-Systemen ebenfalls das Simple Object Access Protocol(SOAP) und zur Anbindung von SAP Lösungen (welche bei … der Versicherer eingesetzt werden) auch das Open Data Protocol (ODATA) unterstützen.
+
+Datenmgmt ----- Eine weitere Herausforderungen, welche Versicherer aktuell begegnen, ist die fragmentierte IT-Landschaft mit den dazugehörigen firmeninternen Datensilos. Um diese Herausforderung zu überwinden sollte die technische Plattform eine spartenübergreifende Sicht auf alle Daten ermöglichen. (vgl. GUNTER2020 S. 11)
+
+Darüber hinaus ist es im Rahmen des Datenmanagements wichtig sicherzustellen, dass die Daten in einem konsistenten und strukturierten Format vorliegen, sodass eine effektive Analyse und Verwaltung der Daten möglich ist. Folglich muss die Plattform eine Extract-Transform-Load (ETL)-Lösung bereitstellt, um Daten aus verschiedenen Quellen zu extrahieren, sie zu transformieren, zu bereinigen und schließlich in ein Zielsystem laden zu können. (vgl. WEINGARTNER2023), (vgl. ASCHENBRENNER2010 S. 342-345)
+
+
+RPA --- Eine  weitere Herausforderung mit der Kfz-Versicherer zu kämpfen haben, ist die manuelle Bearbeitung von bspw. Schadensfällen. Diese Prozesse sind nicht nur fehleranfällig, sondern auch ineffizient, da Mitarbeiter häufig mehr Zeit mit administrativen Aufgaben, als mit der Kundenbetreuung verbringen. Eine Lösung, welche hier Abhilfe schaffen kann, und folglich auch von der technologischen Plattform unterstützt werden sollte, ist Robotic-Process-Automation (RPA). So erwartet die Allianz durch den Einsatz von RPA eine Einsparung von circa 40\% der Arbeitszeit und verspricht sich zudem eine Kostenreduktion bei gleichzeitiger Qualitätssteigerung. 
+
+Datenanalyse --- Darüber hinaus hat sich die Kfz-Versicherung forciert durch die Technologisierung der Automobilbranche und der umfangreichen Daten, die in Fahrzeugen erhoben werden, als Vorreiter der Assekuranz im Bereich Data Analytics hervorgetan.(vgl. GATZERT2023 S. 230) Die Auswertung von großen vernetzten Datensätzen, auch als Big Data bezeichnet, ermöglicht es, bestehende Risiken besser einschätzen und damit neue Produkte und Prämien genauer kalkulieren zu können. Da die Prämienberechnung auf den Grundlagen der Wahrscheinlichkeitsrechnung aufbaut, gilt, je größer die Anzahl der untersuchten Fälle, desto genauer wird das Ergebnis. Folglich sollte die technische Plattform ebenfalls über Lösungen zur Analyse großer Datenmengen verfügen, um den Kfz-Versicherern eine optimale Prämien- und Risikokalkulation zu ermöglichen. (vgl. MANGEI2019 S. 146)
+
+Geräte --- Ein weiterer Trend der sich in der Kfz-Versicherungsbranche zeigt, ist das vermehrte Aufkommen von mobilen Anwendungen, welche von den Versicherungsnehmern beispielsweise bei einem Autounfall genutzt werden können, um den eigenen Standort sowie Fotos vom Schaden selbst teilen zu können. Daher sollte die technologische Plattform ebenfalls mobile Anwendungen unterstützen. (vgl. BAIN2013 S.16)
+
+KI --- Ein weiterer Trend der insbesondere in der Kfz-Versicherungsbranche zu erkennen ist, ist der Einsatz von Chatbots zur Automatisierung des Kundenkontaktes bei z.B. Anträgen, Auskünften oder Schadensmeldungen. So können Fragen von Kunden, insbesondere solche, die sich auf Versicherungspolicen, Abrechnungen oder Schadensmeldungen beziehen, jederzeit beantwortet werden, ohne dass der Kunde auf einen Mitarbeiter warten muss. Dadurch können Chatbots Kfz-Versicherern helfen, die Kosten zu senken, indem sie die Notwendigkeit von Mitarbeitern zu Sachbearbeitung reduzieren. Folglich sollte die Plattform auch Chatbots bereitstellen. (vgl. REICH2019 S. 300-302)
+
+Telematik --- Des Weiteren wird das von einem Menschen gesteuerte KFZ immer selbstständiger und vernetzter, hinzu autonom verkehrenden Fahrzeugen. Ein damit einhergehender in der Kfz-Versicherungsbranche sind die Telematik Tarife. So prognostiziert eine Studie von Roland Berger aus dem Jahr 2015, dass bis 2030 circa 25\% des Kfz-Versicherungsmarktes Telematikprodukte sein werden.(vgl. ROLANDBERGER2015 S.4) Telematik bezeichnet allgemein die Verbindung von Informatik und Telekommunikation, (vgl. ABTS2017 S. 10-11),welche in der Kfz-Versicherungsbranche die Berücksichtigung des individuellen Fahrverhaltens des Versicherungsnehmers sowie anderer externer Rahmenbedingungen bei der Prämienermittlung ermöglicht.(vgl. MERZINGER2017 S.84) So kann der Versicherer seine Produkte besser an das Risikoprofil seiner Kunden anpassen und die Kunden bei einer zurückhaltenden Fahrweise von günstigeren Preisen profitieren. Hierfür werden mithilfe von Sensoren im Auto verschiedene Daten zum Fahrstil des Nutzers erfasst und anschließend zur Prämienermittlung an der Versicherer übermittelt.(vgl. ELING2020 S. 3-4) Für den Einsatz von technologischen Plattformen bei Kfz-Versicherern setzt das voraus, dass die Plattform die von den Sensoren erhobenen Daten empfangen und verarbeiten kann. Folglich sollte die Plattform auch Möglichkeiten zur Entwicklung von IoT Anwendungen bereitstellen.
+
+Skalierbar --- Darüber hinaus sollte die Plattform sowohl horizontal als auch vertikal skalierbar sein. Das bedeutet, dass die Plattform in der Lage sein muss, automatisch zusätzliche Server zu starten und Lasten auf mehrere Server zu verteilen, um hohe Nutzerzahlen und große Datenmengen zu bewältigen(horizontal) und auch die Rechenleistung und Speicherkapazität des Servers erhöhen kann, um mit wachsenden Anforderungen umzugehen(vertikal).
+Darüber hinaus sollte die Plattform nicht von der darunterliegenden Infrastruktur abhängig sein.
+
+Echtzeit --- Mit dem verstärkten Aufkommen von digitalen Ökosystemen muss eine Plattform für Kfz-Versicherer ebenfalls die Verarbeitung von Daten in Echtzeit ermöglichen, damit der Versicherer Konkurrenzfähig bleibt. Denn mittlerweile benötigen viele Service Echtzeitinformationen und folglich muss die Plattform die dafür notwendigen technischen Voraussetzungen erfüllen. 
+
+Datensicherheit --- Die Einhaltung von Datensicherheitsanforderungen stellt eine wichtige Grundvoraussetzung für die technische Plattform von Kfz-Versicherungsunternehmen dar. Jedoch ist  die Bewertung des Sicherheitsniveaus cloudbasierter Plattformen für Versicherungsunternehmen oft sehr schwierig und aufwendig, weshalb häufig auf Zertifizierungen und Testate zurückgegriffen wird. (vgl. ZDANOWIECKI2016 S. 777) In der Cloud-Computing-Praxis ist die ISO/IEC 27001 der übliche Standard, der die Anforderungen an ein Informationssicherheitsmanagementsystem(ISMS) definiert. Darüber hinaus müssen Kfz-Versicherer sicherstellen, dass die Datenverarbeitung den Anforderungen der DSGVO entspricht, um den Schutz personenbezogener Daten zu gewährleisten. Hierfür gibt es seit 2014 den ISO/EIC 27018-Standard, der speziell für diesen Zweck entwickelt wurde. Somit sollten technische Plattformen für Kfz-Versicherer sowohl nach ISO/EIC 27001 als auch nach ISO/EIC 27018 zertifiziert sein. (vgl. HENNRICH2023 S. 194-196)
+
+Des Weiteren sollte die Plattform auch eine hybride Multi-Cloud-Architektur unterstützen, sodass der Kfz-Versicherer von einem (IaaS)-Anbieter abhängig ist.
+
+--ggf. das ganze vorher auch mal ein Stückweit kostenlos testen zu können.
+
+Eine tabellarische Auflistung der Anforderungen ist dem Anhang ... zu entnehmen.
+
+
+
+
+
+
+
+
 
 
 
