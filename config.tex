@@ -16,6 +16,7 @@
 \usepackage{graphicx}						% use various graphics formats, um Grafiken einzubinden
 \usepackage{placeins}
 \usepackage{subfig}
+\usepackage{tabularx}
 \usepackage[german]{varioref} 				% nicer references \vref
 \usepackage{caption}						%better Captions
 \usepackage{booktabs} 						%nicer Tabs
@@ -137,7 +138,8 @@
 %\renewcommand*{\headfont}{\upshape\sffamily}
 %\renewcommand*{\footfont}{\upshape\sffamily}
 \renewcommand{\chaptermarkformat}{}
-\RedeclareSectionCommand[beforeskip=0pt]{chapter}
+\RedeclareSectionCommand[beforeskip=0pt, afterskip=3pt]{chapter}
+\RedeclareSectionCommand[beforeskip=0pt, afterskip=1pt]{section}
 \clearscrheadfoot
 
 \ifoot[\rule{0pt}{\ht\strutbox+\dp\strutbox}DHBW Mannheim]{\rule{0pt}{\ht\strutbox+\dp\strutbox}DHBW Mannheim}
