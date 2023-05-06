@@ -2,13 +2,25 @@
 
 \improvement{Idee Bernd: BTP ist vielleicht nicht die beste Lösung am Markt, aber bietet alle Bausteine, da kann man Erfahrung sammeln und später auf ein noch besseres Produkt wechseln}
 
-Die Task-Technology-Fit Analyse hat gezeigt, dass die SAP Business Technology Platform zu 95\% die Anforderungen der Kfz-Versicherer erfüllt und somit eine vielversprechende Plattform für die Versicherungsbranche und den Bereich der Kfz-Versicherung darstellt.
+V2—(Neu)---------------------------------------------------------------------------------------------
+
+Deutschen Kfz-Versicherern kann der Einsatz der SAP BTP empfohlen werden, da sie nahezu alle Anforderungen, ausgenommen das Bereitstellen von Chatbot Funktionalitäten, an eine digitale Plattform erfüllt und insbesondere in den für Kfz-Versicherer wichtigen Anforderungsbereichen Integration und Entwicklung besser abschneidet als die Produkte der Mitbewerber. Um nun durch den Einsatz der SAP BTP Wettbewerbsvorteile zu erzielen, sollten Kfz-Versicherer die einzelnen Services der SAP BTP wie folgt schrittweise realisieren. 
+(1) Im Rahmen einer SOA sollten Kfz-Versicherer ihre bestehenden Backendsysteme kapseln und diese über Cloud Konnektoren an die BTP anbinden, um die dort vorgehaltenen Daten und Prozessabläufe für andere Anwendungen zugänglich zu machen. Sofern die Legacy-Systeme der Kfz-Versicherer hinreichend integriert sind, sollten anschließend die REST-, SOAP- und ODATA-APIs/ Schnittstellen der BTP zur Integration in Mobilitätsökosysteme, sowie zur Anbindung weiterer Vertriebskanäle genutzt werden. Dadurch könnten sie ihren Kundenstamm erweitern und folglich ihre Marktposition ausbauen. Komplementär sollte dabei zur Steuerung der Schnittstellenaufrufe der API Management Service der BTP verwendet werden.
+(2) Darauf aufbauend sollten Kfz-Versicherer die Mobile Services der SAP BTP nutzen, um für Versicherungsnehmer eine App bereitzustellen, mit der sämtliche Kfz-Versicherungsaktivitäten wie das Melden eines Schadenfalls oder die Verwaltung der Versicherungsverträge durchgeführt werden können. Dabei können zur Entwicklung der mobilen Applikation das SAP Business Application Studio verwendet und auf die notwendigen Daten über die BTP zugegriffen werden. 
+(3) Zusätzlich sollten Kfz-Versicherer nachdem die Anbindung der verschiedenen Altsysteme an die BTP abgeschlossen ist, den Datasphere Service der BTP verwenden, um die historischen Daten aus den Altsystemen zu extrahieren und diese in ein konsistentes und strukturiertes Format zu transformieren. Darauffolgend sollten die aufbereiteten in die SAP Analytics Cloud geladen und dort mithilfe von ML-Modellen ausgewertet werden, um die Prämien- und Risikokalkulation zu optimieren.
+
+Neben diesen 3 aufeinander aufbauenden Handlungsempfehlungen, könnten Kfz-Versicherer die Plattform ebenfalls nutzen, um neue Technologien auszutesten auch wenn die einzelnen Services nicht marktführend sind. So könnten beispielsweise mit die IoT Services der SAP BTP verwendet werden, um Sensordaten zum Fahrverhalten der Kunden bei der Tarifierung zu berücksichtigen. Dadurch könnten Kfz-Versicherer langfristig weitere Finanzdienstleistungen wie Telematik-Tarife anbieten. Des Weiteren könnten Kfz-Versicherer die Low-Code No-Code Werkzeuge des SAP Build Apps Services testen, um beispielsweise die Entwicklung der oben aufgeführten Applikation durchzuführen. Damit könnte die Zusammenarbeit zwischen IT- und Geschäftsabteilung in funktionsübergreifenden Teams gestärkt und gleichzeitig das Problem der fehlenden IT-Fachkräfte gemildert werden. Darüber hinaus könnten Kfz-Versicherer repetitive Prozesse wie das Erstellen von Berichten automatisieren, indem sie mit dem SAP Build Process Automation Service das Erstellen von beaufsichtigten oder unbeaufsichtigten Bots ausprobieren oder einen der von SAP vordefinierten Bots verwenden. Dadurch könnte die Bearbeitungszeit der Prozesse reduziert und mehr Humankapital für die Kundenbetreuung zur Verfügung stehen.
+
+\newpage
+V1---(alt - vor der Erweiterung der Analyse um das Meinungsbild des Marktes)------------------------------------------------------------------------------------------------------------
+
+Die Task-Technology-Fit Analyse hat gezeigt, dass die SAP Business Technology Platform zu 95\% die Anforderungen der Kfz-Versicherer erfüllt und somit eine vielversprechende Plattform für die \ac{kfz}-Versicherungsbranche darstellt.
 
 Um durch den Einsatz der SAP BTP Wettbewerbsvorteile erzielen zu können, sollten Kfz-Versicherer die einzelnen Services der SAP BTP schrittweise implementieren. Dabei hat sich anhand der Priorisierung der Anforderungen durch die Experten gezeigt, dass neben den grundlegenden Anforderungen wie Datensicherheit und Skalierbarkeit vor allen Dingen die Anforderungen im Bereich der Integration besonders wichtig sind.
 
 (1)Hier sollten Kfz-Versicherer im Rahmen einer SOA ihre bestehenden Backendsysteme kapseln und diese an die BTP anbinden, um die dort vorgehaltenen Daten und Prozessabläufe für andere Anwendungen zugänglich zu machen. Sofern die Legacy-Systeme der Kfz-Versicherer hinreichend eingebunden sind, sollten die Schnittstellen der BTP zur Anbindung an Mobilitätsökosysteme, sowie andere Vertriebskanäle genutzt werden. Dadurch könnten sie ihren Kundenstamm erweitern und folglich ihre Marktposition weiter ausbauen. 
 
-(2) Darauf aufbauend sollten Kfz-Versicherer über die BTP eine App bereitstellen, mit der Versicherungsnehmer alle ihre Kfz-Versicherungsaktivitäten, wie das Vereinbaren eines Werkstatttermins, zentral steuern können, da eine solche Anwendung insbesondere von der jungen Generation heutzutage erwartet wird. (vgl. Eduard 0:9:03)  Dabei können Kfz-Versicherer die dafür notwendige App auch auf der BTP selbst mithilfe des Mobile Services entwickeln.
+(2) Darauf aufbauend sollten Kfz-Versicherer über die BTP eine App bereitstellen, mit der Versicherungsnehmer alle ihre Kfz-Versicherungsaktivitäten, wie das Vereinbaren eines Werkstatttermins, zentral steuern können, da eine solche Anwendung insbesondere von der jungen Generation heutzutage erwartet wird. Dabei können Kfz-Versicherer die dafür notwendige App auch auf der BTP selbst mithilfe des Mobile Services entwickeln.
 
 (3) Zur Erweiterung des eigenen Angebotsportfolios sollten Kfz-Versicherer darüber hinaus die IoT Services der SAP BTP nutzen. Um Sensordaten zum Fahrverhalten von Kunden bei der Prämienkalkulation zu berücksichtigen und damit weitere Finanzdienstleistungen wie z.B. passgenaue Telematik Tarife anbieten zu können.
 
@@ -17,9 +29,6 @@ Um durch den Einsatz der SAP BTP Wettbewerbsvorteile erzielen zu können, sollte
 (5) Nach dem die Anbindung der verschiedenen Altsysteme an die BTP abgeschlossen ist, sollten Kfz-Versicherer mit der SAC Analytics Cloud die historischen Daten der Kunden mit der SAP Analytics Cloud analysieren, um die Prämien- und Risikokalkulation zu optimieren. Dabei sollten für die dafür benötigten Daten zunächst mit dem Data Intelligence Service aus den verschiedenen Quellen aggregiert und mit dem Datasphere Service aufbereitet werden.
 
 (6) Weiterhin sollten Kfz-Versicherer nach der Durchführung der Schritte 1 und 2 die repetitiven manuellen Prozesse wie das Erstellen von Berichten oder das Überprüfen von Kfz-Schäden mit dem BTP Service SAP Build Process Automation automatisieren, um die Bearbeitungszeiten zu reduzieren und mehr Ressourcen für die Kundenbetreuung zu haben.
-
-
-
 
 
 
