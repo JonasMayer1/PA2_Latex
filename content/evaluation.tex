@@ -10,7 +10,7 @@ Im Nachfolgenden werden die in der Literatur gefundenen Anforderungen unter den 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{img/PP_Anforderungen2.jpg}
+    \includegraphics[width=1\textwidth]{img/PP_Anforderungen3.jpg}
     \caption[Anforderungen der Kfz-Versicherer an digitale Plattformen]{Anforderungen der Kfz-Versicherer an digitale Plattformen\autocite{PPAnf}}
     \label{fig:PPAnf}
 \end{figure}
@@ -46,10 +46,12 @@ Eine der größten Herausforderungen, denen sich \ac{kfz}-Versicherungsunternehm
 
 (14) Gemäß Reich (2019) besteht eine zusätzliche Option für die Automatisierung von Kundeninteraktion in der \ac{kfz}-Versicherungsbranche bei Fällen wie Anträgen, Auskünften oder Schadensmeldungen durch den Einsatz von Chatbots. So können Fragen von Kunden, insbesondere solche, die sich auf Versicherungspolicen, Abrechnungen oder Schadensmeldungen beziehen, jederzeit beantwortet werden, ohne dass der Kunde auf einen Mitarbeiter warten muss. Dadurch kann der Bedarf nach Mitarbeitern in der Sachbearbeitung reduziert und die Kundenzufriedenheit erhöht werden, weshalb die Plattform für Versicherer auch \textbf{Chatbot-Funktionalitäten} bereitstellen sollte. \autocite[Vgl.][S. 300-302]{REICH2019}
 
-(15) Die strikten regulatorischen Anforderungen innerhalb der Versicherungsbranche erfordern eine ausgeprägte \textbf{Datensicherheit} für alle verwendeten Softwarelösungen, einschließlich technischer Plattformen. Da die individuelle Überprüfung des Sicherheitsniveaus zu aufwändig ist, greifen Versicherungsunternehmen in der Praxis auf Zertifizierungen und Testate zurück. \autocite[Vgl.][S. 777]{ZDANOWIECKI2016} Die \acsu{iso}/\acsu{IEC} 27001 Norm, der International Organization for Standardization sowie der International Electrotechnical Commission dient dabei als Standard für Cloud-basierte Lösungen. Zusätzlich müssen Kfz-Versicherer sicherstellen, dass die Verarbeitung von personenbezogenen Daten den Vorschriften der \ac{dsgvo} entspricht. Hierfür wurde der Standard ISO/IEC 27018 festgelegt. Folglich sollte eine technische Plattform für \ac{kfz}-Versicherer sowohl \textbf{nach ISO/IEC 27001 als auch nach ISO/IEC 27018 zertifiziert} sein. 
+(15) Die strikten regulatorischen Anforderungen innerhalb der Versicherungsbranche erfordern eine ausgeprägte \textbf{Datensicherheit} für alle verwendeten Softwarelösungen, einschließlich technischer Plattformen. Da die individuelle Überprüfung des Sicherheitsniveaus zu aufwändig ist, greifen Versicherungsunternehmen in der Praxis auf Zertifizierungen und Testate zurück. \autocite[Vgl.][S. 777]{ZDANOWIECKI2016} Die \acsu{iso}/\acsu{iec} 27001 Norm, der International Organization for Standardization sowie der International Electrotechnical Commission dient dabei als Standard für Cloud-basierte Lösungen. Zusätzlich müssen Kfz-Versicherer sicherstellen, dass die Verarbeitung von personenbezogenen Daten den Vorschriften der \ac{dsgvo} entspricht. Hierfür wurde der Standard ISO/IEC 27018 festgelegt. Folglich sollte eine technische Plattform für \ac{kfz}-Versicherer sowohl \textbf{nach ISO/IEC 27001 als auch nach ISO/IEC 27018 zertifiziert} sein. 
 \improvement{Fehlt hier ein Zitat}
 
 (16) Eine weitere Anforderung, die ebenfalls von Beginn an erfüllt sein sollte, ist die Fähigkeit der \textbf{Plattform zur horizontalen und vertikalen Skalierbarkeit}. Dies erfordert, dass die Plattform zusätzliche Server automatisch starten und Lasten auf mehrere Server verteilen kann, um hohe Nutzerzahlen zu bewältigen, wie sie speziell im Herbst bei \ac{kfz}-Versicherern aufgrund des verstärkten Wechsels von Versicherungsnehmnern vorkommen können. (horizontale Skalierbarkeit). Des Weiteren muss die Plattform in der Lage sein, je nach Bedarf die Rechenleistung und Speicherkapazität des Servers zu erhöhen, um einem höheren Ressourcenbedarf gerecht zu werden (vertikale Skalierbarkeit). \autocite[Vgl.][S. 23]{JAHNERT2020}
+
+\newpage
 
 \subsection{Evaluation und Ergänzung der Anforderungen aus Sicht der Experten}
 
@@ -67,18 +69,16 @@ Des Weiteren wurde von Experte 1 das Unterstützen einer „Entkopplungsarchitek
 
 (20) Contentpakete – Aus Sicht des Experten 3 sollte eine technische Plattform neben den bereitgestellten Tools in den einzelnen Clustern auch Contentpakete bereitstellen. Mit dem Begriff Content sind dabei Inhalte gemeint, die den Implementierungsaufwand in den einzelnen Bereichen reduzieren. Das können bspw. vordefinierte Schnittstellen, Adaptoren oder auch vordefinierte Frameworks sein. \autocite[Vgl.][]{SCHMIDT2023} 
 
-\improvement{Statt Experte 1,2,3 die Namen der Experten nennen}
+Nach Überprüfung und Ergänzung der in der Literatur gefundenen Anforderungen, wurden die Anforderungen von den Experten ebenfalls nach ihrer Wichtigkeit in den nächsten Jahren priorisiert. Die Aufgaben wurden nach Themen gruppiert und die Bewertung durch die Experten zunächst einzeln aufgeführt und dann Durchschnittswerte je Anforderung und je Cluster gebildet. Die Experten konnten einen Wert von 1-3 vergeben, wobei 1 für eine niedrige, 2 für eine mittlere und 3 für eine hohe Priorität steht. Wurden von einem Experten weitere Anforderungen benannt und diese im Rahmen der Analyse zu bereits identifizierten Anforderungen dazugezählt, wird für die Priorisierung der Anforderung der Mittelwert gebildet.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{img/Gewichtung_Anforderung.jpg}
+    \includegraphics[width=1\textwidth]{img/Gewichtung_Anforderung2.jpg}
     \caption[Gewichtung der Anforderungen durch die Experten]{Gewichtung der Anforderungen durch die Experten\autocite{Gewichtung}}
     \label{fig:Gewichtung}
 \end{figure}
 \footnotetext{eigene Darstellung}
 \improvement{Aufpassen wo Tabelle hinrutscht}
-
-Nach Überprüfung und Ergänzung der in der Literatur gefundenen Anforderungen, wurden die Anforderungen von den Experten ebenfalls nach ihrer Wichtigkeit in den nächsten Jahren priorisiert. Die Aufgaben wurden nach Themen gruppiert und die Bewertung durch die Experten zunächst einzeln aufgeführt und dann Durchschnittswerte je Anforderung und je Cluster gebildet. Die Experten konnten einen Wert von 1-3 vergeben, wobei 1 für eine niedrige, 2 für eine mittlere und 3 für eine hohe Priorität steht. Wurden von einem Experten weitere Anforderungen benannt und diese im Rahmen der Analyse zu bereits identifizierten Anforderungen dazugezählt, wird für die Priorisierung der Anforderung der Mittelwert gebildet.
 
 Anhand der Tabelle ist zu erkennen, dass die Experten die einzelnen Anforderungen zwar teilweise sehr unterschiedlich bewerten, sich aber dennoch einige Tendenzen erkennen lassen. So sind neben den grundlegenden Erfordernissen Datensicherheit und Skalierbarkeit insbesondere die Anforderungen im Bereich der Integration besonders wichtig. 
 
