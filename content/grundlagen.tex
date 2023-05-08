@@ -72,7 +72,6 @@ In einem solchen Plattform-Ökosystem gibt es mindestens drei Akteure: Den Platt
 
 Die SAP Business Technology Platform ist eine cloudbasierte Technologieplattform, die es Unternehmen ermöglicht, Anwendungen zu erstellen, zu integrieren, zu verwalten und zu skalieren. Die Plattform wurde erstmals im Mai 2020 auf der SAPPHIRE-NOW Konferenz vorgestellt und zuvor als SAP Cloud Platform vertrieben, mit einem Fokus auf Applikationsentwicklung und Integration.\autocite[Vgl.][S. 2]{PREUSS2021}  Aktuell lassen sich die bereitgestellten Funktionalitäten der SAP \ac{btp} in die fünf Bereiche Datenmanagement, Datenanalyse, Anwendungsentwicklung, Integration sowie intelligente Technologien unterteilen. Als \ac{apaas}-Lösung umfasst die SAP \ac{btp} in den einzelnen Bereichen nicht nur eine, sondern mehrere Kernapplikationen, wie beispielsweise bei der Datenverarbeitung mit dem SAP Data Intelligence und dem SAP Datasphere Service. Die Dienstleistungen sind dabei modular miteinander kombinierbar und werden maßgeblich über die Public Cloud bereitgestellt. Die dafür erforderliche Infrastruktur wird mithilfe von \ac{iaas}-Diensten aufgebaut. Hierbei werden im Rahmen der 4 + 1 Multi-Cloud Strategie der SAP die Rechenzentren der Anbieter Amazon Web Services, Google Cloud, Microsoft Azure, Alibaba sowie SAP unterstützt. Dadurch stehen die Funktionen der Plattform in mehreren Rechenzentren weltweit zur Verfügung und erlauben eine globale Umsetzung der Anwendungsszenarien.\autocite[Vgl.][S. 57-59]{SEUBERT} Eine umfassende Beschreibung der fünf Funktionsbereiche der SAP \ac{btp} ist Kapitel \ref{sec:TechCharak} zu entnehmen.
 
-%\improvement{Noch Abbildung zu den Bausteinen der SAP BTP}
 
 \section{Die deutsche Versicherungsbranche}
 
@@ -88,7 +87,7 @@ Folglich ist die Versicherung ein Produkt zur Deckung von Sicherheitsbedürfniss
 Grundvoraussetzung ist hierbei, dass der Umfang der Schäden statistisch abschätzbar und dadurch der benötigte Beitrag jedes Mitglieds des Kollektivs mathematisch bestimmbar ist. Aufgrund dieser Kombinationen von Risikotransfer und Prämienzahlung werden Versicherungsunternehmen auch als Finanz- und Risikointermediäre bezeichnet. \autocite[Vgl.][S. 53]{ZWACK2017}
 
 Grundsätzlich wird zwischen zwei Arten von Versicherungsunternehmen unterschieden: Erstversicherer und Rückversicherer. Erstere schließen ausschließlich Versicherungsgeschäfte mit gewerblichen Unternehmen, privaten und öffentlichen Haushalten ab, währenddessen Rückversicherer das daraus resultierende Risiko der Erstversicherer übernehmen.\autocite[Vgl.][S. 240f.]{FARNY2011} 
-%\improvement{beachten, dass nicht über den Rand steht}
+
 
 Darüber hinaus sind deutsche Erstversicherer durch verschiedene regulatorische Anforderungen wie dem \ac{vag} und der \enquote{Solvency II}-Richtlinie der Europäischen Union verpflichtet, um die Stabilität und Integrität des Versicherungsmarktes zu wahren. \autocite[Vgl.][]{BAFIN2016} Eine der fundamentalen Vorschriften ist die Spartentrennung nach § 6 II \ac{vag}. Demnach müssen Erstversicherungsunternehmen getrennte Geschäftsbereiche für Lebens-, Kranken- und Kompositversicherungen führen.(siehe Abbildung \ref{fig:StVKonzern}) Zur Gruppe der Kompositversicherungen, welche auch als Schaden- und Unfallversicherung bezeichnet wird, zählen seit dem 30.06.1990 alle Versicherungen, die nicht zur Lebens- und Krankenversicherung gehören und damit auch die \ac{kfz}-Versicherung. \autocite[Vgl.][S. 241-243]{FARNY2011} 
 
@@ -102,7 +101,6 @@ Darüber hinaus sind deutsche Erstversicherer durch verschiedene regulatorische 
 
 %In der Praxis führt das Spartentrennungsprinzip häufig zur Bildung von größeren Mutterkonzernen, bei denen eine Holding über mehrere rechtlich selbstständige Versicherungsunternehmen verfügt (siehe Abbildung \ref{fig:StVKonzern}). Eine beispielhafte Konzernstruktur der AXA SE ist dem Anhang \ref{fig:AXAKstr} zu entnehmen. 
 
-%\improvement{Plagiatgefahr --- bzw. Quelle prüfen oder Checken ob das in Farny auch drinnensteht}
 
 %\hyperref[subsec:KonzernStrukturen]{4}
 
@@ -128,11 +126,11 @@ Die Kraftfahrtunfallversicherung oder auch Insassenunfallversicherung genannt, d
 %Dennoch werden aufgrund der großen Deckung der Leistung durch andere Versicherungen verhältnismäßig wenige Insassenunfallversicherungen abgeschlossen. So kommt bei einem fremdverschuldeten Unfall die \ac{kfz}-Haftpflichtversicherung des Unfallverursachers für alle Unfallopfer auf. Bei selbst verschuldeten Unfällen sind die Mitfahrer durch die \ac{kfz}-Haftpflichtversicherung des Fahrers bzw. des Halters abgesichert. Somit ist das Abschließen einer Insassenunfallversicherung vor allem zum Schutz des Fahrers selbst sinnvoll.\autocite[Vgl.][S. 173f]{LAMMERS2006} In der Praxis wird hierfür allerdings häufig auf Alternativen wie die private Unfallversicherung zurückgegriffen.\autocite[Vgl.][]{GRATZLA2018}  
 
 In der \ac{kfz}-Versicherungssparte gibt es einen enormen Konkurrenzdruck. So versuchen die einzelnen Anbieter insbesondere im Herbst neue Kunden zu gewinnen, da die Verträge der Versicherungsnehmer in der Regel zum 31.12 eines jeden Jahres enden und folglich bis zum 30.11. eines jeden Jahres gekündigt werden können.\autocite[Vgl.][]{WARENTEST2022} Darüber hinaus veröffentlicht der Gesamtverband der deutschen Versicherer jedes Jahr im Herbst ausgehend von der Unfallhäufigkeit der verschiedenen Fahrzeugtypen, die Preiskategorien für die einzelnen Typklassen. Daraufhin passen die meisten Versicherer ihre Beiträge an, was wiederum ihren Kunden ermöglicht, von einem Sonderkündigungsrecht Gebrauch zu machen.\autocite[Vgl.][]{NUS2022} Diese beiden Faktoren führen dazu, dass die Versicherer vor allem im Herbst versuchen, neue Kunden mit Sonderangeboten und Rabatten für sich zu gewinnen. 
-%\improvement{Im Herbst: Warum im Herbst (kommt ein Tick zu spät), Verträge enden nicht sondern es gibt ein Sonderkündigungsrecht bei Preisanpassung}
+
 
 Dabei sind die Kunden oftmals bereit, neben der \ac{kfz}-Versicherung weitere Policen beim gleichen Anbieter abzuschließen. Um von diesem Interesse und der Wechselbereitschaft der Kunden zu profitieren, sind die Versicherungsunternehmen bereit, kleinere Profite bis hin zu Verlusten bei der \ac{kfz}-Versicherung in Kauf zu nehmen.\autocite[Vgl.][]{HARTUNG2019} Dies lässt sich ebenfalls an der Schadensquote der \ac{kfz}-Versicherungen erkennen, welche zwischen 2015 und 2021 bei durchschnittlich 96,4 \% lag. Sie stellt das Verhältnis zwischen den Versicherungsleistungen und den Beitragseinnahmen dar.\autocite[Vgl.][]{GDVKFZ}  
 
-%\improvement{Marktkräfte und Einflussfaktoren: Größe, D.Ö., Check24, Prozesse, vergleichsportale mit Services zum Wechseln befeuern die Wechselbereitschaft =================== "cross-selling2}
+
 
 
 \newpage
